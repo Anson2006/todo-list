@@ -6,7 +6,7 @@ function App() {
   const [tasks, setTasks] = useState([]);
   const [input, setInput] = useState('');
 
-  // 2. ADD A TASK FUNCTION
+  
   const handleAddTask = () => {
     if (input.trim() === '') return; // Blocks empty items from being added
     
@@ -34,7 +34,7 @@ function App() {
       if (task.id === idToToggle) {
         return { ...task, isDone: !task.isDone }; 
       }
-      return task; // Leaves all other tasks exactly as they were
+      return task; 
     });
     setTasks(updatedTasks);
   };
